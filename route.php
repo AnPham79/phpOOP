@@ -29,11 +29,11 @@ switch ($controllerAdmin) {
     case 'category':
         switch ($action) {
             case 'index':
-            case 'createProduct':
-            case 'editProduct':
-            case 'storeProduct':
-            case 'updateProduct':
-            case 'deleteProduct':
+            case 'createCategory':
+            case 'storeCategory':
+            case 'editCategory':
+            case 'updateCategory':
+            case 'deleteCategory':
                 (new controllerCategory())->$action();
                 break;
             default:

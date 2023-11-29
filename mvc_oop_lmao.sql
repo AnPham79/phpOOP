@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 28, 2023 lúc 05:12 AM
+-- Thời gian đã tạo: Th10 29, 2023 lúc 10:39 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
 
@@ -37,8 +37,9 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id_category`, `name_category`) VALUES
-(1, 'sản phẩm 1'),
-(2, 'sản phẩm 2');
+(1, 'wibu xnxx'),
+(2, 'sản phẩm 2'),
+(3, 'wibu');
 
 -- --------------------------------------------------------
 
@@ -60,9 +61,10 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id_product`, `name_product`, `photo_product`, `price_product`, `description_product`, `FK_id_category`) VALUES
-(15, 'an đẹp trai siêu cấp', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645.jpg', '80.000', 'đẹp', 1),
+(15, 'sản phẩm 1', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645.jpg', '80.000', 'đẹp', 3),
 (16, 'ảnh treo tường 2', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645.jpg', '60.000', 'đẹp', 1),
-(19, 'an đẹp trai siêu cấp', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645.jpg', '60.000', 'đẹp', 2);
+(19, 'an đẹp trai siêu cấp', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645.jpg', '60.000', 'đẹp', 2),
+(20, 'an đẹp trai siêu cấp', 'https://d1hjkbq40fs2x4.cloudfront.net/2017-08-21/files/landscape-photography_1645.jpg', '60.000', 'đẹp', 2);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -89,13 +91,13 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT cho bảng `category`
 --
 ALTER TABLE `category`
-  MODIFY `id_category` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_category` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
-  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

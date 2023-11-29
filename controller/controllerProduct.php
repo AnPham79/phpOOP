@@ -8,6 +8,8 @@ class controllerProduct {
     }
 
     public function createProduct() {
+        $arr = (new categoryModel)->getAllCategory();
+
         require 'view/product/createProduct.php';
     }
 
@@ -16,8 +18,9 @@ class controllerProduct {
         $photo_product = $_POST['photo_product'];
         $price_product = $_POST['price_product'];
         $description_product = $_POST['description_product'];
+        $FK_id_category = $_POST['FK_id_category'];
 
-        (new ProductModel())->createProduct($name_product, $photo_product, $price_product, $description_product);
+        (new ProductModel())->createProduct($name_product, $photo_product, $price_product, $description_product, $FK_id_category);
     }
 
     public function editProduct() {
@@ -25,17 +28,20 @@ class controllerProduct {
 
         $each = (new ProductModel())->findProduct($id_product);
 
+        $arr = (new categoryModel())->getAllCategory();
+
         require 'view/product/editProduct.php';
     }
 
     public function updateProduct() {
         $id_product = $_POST['id_product'];
+        $FK_id_category = $_POST['FK_id_category'];
         $name_product = $_POST['name_product'];
         $photo_product = $_POST['photo_product'];
         $price_product = $_POST['price_product'];
         $description_product = $_POST['description_product'];
 
-        (new ProductModel())->updateProduct($id_product, $name_product, $photo_product, $price_product, $description_product);
+        (new ProductModel())->updateProduct($id_product, $FK_id_category, $name_product, $photo_product, $price_product, $description_product);
     }
 
     public function deleteProduct() {

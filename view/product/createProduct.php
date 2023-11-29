@@ -15,5 +15,13 @@
     <br>
     <input type="text" name="description_product">
     <br>
+    Danh mục
+    <br>
+    <select name="FK_id_category">
+        <?php foreach($arr as $each) { ?>
+            <option value="<?php echo $each->getIdCategory() ?>"><?php echo $each->getNameCategory() ?></option> 
+        <?php } ?>
+    </select>
+    <br>
     <button type="submit">Thêm sản phẩm</button>
 </form>
